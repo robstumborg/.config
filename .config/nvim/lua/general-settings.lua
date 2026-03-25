@@ -34,3 +34,12 @@ vim.o.expandtab = true
 vim.opt.backup = false
 vim.opt.writebackup = false
 
+-- split keybinds
+vim.keymap.set("n", "ss", ":split<cr>", { silent = true })
+vim.keymap.set("n", "sv", ":vsplit<cr>", { silent = true })
+vim.keymap.set("n", "sc", ":close<cr>", { silent = true })
+vim.keymap.set("n", "sh", "<c-w>h", { silent = true })
+vim.keymap.set("n", "sj", "<c-w>j", { silent = true })
+vim.keymap.set("n", "sk", "<c-w>k", { silent = true })
+vim.keymap.set("n", "sl", "<c-w>l", { silent = true })
+
