@@ -40,3 +40,9 @@ vim.o.expandtab = true
 -- backup
 vim.opt.backup = false
 vim.opt.writebackup = false
+
+-- git integration
+vim.pack.add({"https://github.com/lewis6991/gitsigns.nvim"})
+vim.o.updatetime = 100
+vim.wo.signcolumn = "yes"
+
