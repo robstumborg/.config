@@ -7,4 +7,5 @@ require("git")
 require("clipboard")
 require("fzf")
 require("lsp")
+require("status-line")
 
