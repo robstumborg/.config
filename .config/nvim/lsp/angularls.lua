@@ -126,6 +126,9 @@
 
     filetypes = { 'typescript', 'html', 'typescriptreact', 'htmlangular', 'javascriptreact' },
 
-    root_markers = { 'angular.json', 'nx.json' },
+    root_dir = function(bufnr, on_dir)
+      local root = vim.fs.root(bufnr, { 'angular.json', 'nx.json' })
+      if root then on_dir(root) end
+    end,
   }
 
