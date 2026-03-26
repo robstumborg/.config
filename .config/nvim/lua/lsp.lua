@@ -1,6 +1,7 @@
 vim.lsp.enable({
   "intelephense",
   "ts_ls",
+  "eslint",
   "angularls",
 })
 
