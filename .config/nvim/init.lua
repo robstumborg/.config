@@ -6,4 +6,5 @@ require("general-settings")
 require("git")
 require("clipboard")
 require("fzf")
+require("lsp")
 
