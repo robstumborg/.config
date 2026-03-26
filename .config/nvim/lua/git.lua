@@ -34,6 +34,7 @@ require("gitsigns").setup({
   end,
 })
 
+vim.keymap.set("n", "<leader>grf", ":Gitsigns reset_buffer<cr>", { desc = "git: reset buffer" })
 vim.keymap.set({ "n", "v" }, "<leader>gah", ":Gitsigns stage_hunk<cr>", { desc = "git: stage this hunk" })
 vim.keymap.set({ "n", "v" }, "<leader>guh", ":Gitsigns undo_stage_hunk<cr>", { desc = "git: undo stage this hunk" })
 vim.keymap.set({ "n", "v" }, "<leader>grh", ":Gitsigns reset_hunk<cr>", { desc = "git: reset this hunk" })
