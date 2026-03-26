@@ -8,4 +8,5 @@ require("clipboard")
 require("fzf")
 require("lsp")
 require("status-line")
+require("treesitter")
 
