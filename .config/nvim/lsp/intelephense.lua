@@ -4,7 +4,7 @@ return {
   filetypes = { 'php' },
   root_markers = { '.git', 'composer.json' },
   init_options = {
-    licenseKey = '~/.config/intelephense/license.txt',
+    licenceKey = vim.fn.expand('~/intelephense/license.txt')
   },
   settings = {
     intelephense = {
