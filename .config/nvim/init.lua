@@ -10,4 +10,5 @@ require("lsp")
 require("status-line")
 require("treesitter")
 require("completion")
+require("file-explorer")
 
