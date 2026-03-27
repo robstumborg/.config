@@ -43,3 +43,32 @@ vim.keymap.set("n", "sj", "<c-w>j", { silent = true })
 vim.keymap.set("n", "sk", "<c-w>k", { silent = true })
 vim.keymap.set("n", "sl", "<c-w>l", { silent = true })
 
+-- new file, save file, destroy buffer
+vim.keymap.set("n", "<c-n>", ":enew<cr>", { silent = true })
+vim.keymap.set("n", "<c-w>", ":bd!<cr>", { silent = true, nowait = true })
+
+-- deal w/ word wrap (treat wrapped lines as their own)
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
+-- toggle highlight
+vim.keymap.set("n", "<left>", ":set hls!<cr>", { silent = true })
+
+-- toggle wordwrap
+vim.keymap.set("n", "<a-z>", ":set wrap!<cr>", { silent = true })
+
+-- cycle colorcolumn (off, 80, 120)
+vim.keymap.set("n", "<a-c>", function()
+	vim.o.colorcolumn = (vim.o.colorcolumn == "") and "80" or (vim.o.colorcolumn == "80") and "120" or ""
+end)
+
+-- highlight on yank
+local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = "*",
+})
+
