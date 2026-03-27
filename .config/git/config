@@ -1,0 +1,19 @@
+[init]
+  defaultBranch = master
+[user]
+  name = Robert Stumborg
+  email = rob@stumb.org
+  signingkey = BB38364C45EF3D27
+
+[commit]
+  gpgsign = true
+
+[diff]
+  tool = difftastic
+  external = difft
+
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+
+[merge]
+  conflictstyle = zdiff3
