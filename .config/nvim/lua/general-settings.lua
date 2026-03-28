@@ -62,6 +62,9 @@ vim.keymap.set("n", "<a-c>", function()
 	vim.o.colorcolumn = (vim.o.colorcolumn == "") and "80" or (vim.o.colorcolumn == "80") and "120" or ""
 end)
 
+-- :W -> :w alias
+vim.api.nvim_create_user_command("W", "w", {})
+
 -- highlight on yank
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
