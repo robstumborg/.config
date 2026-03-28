@@ -158,7 +158,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- ─────────────────────────────────────────────────────────────
 -- buffer navigation keymaps
 -- ─────────────────────────────────────────────────────────────
-vim.keymap.set("n", "<C-j>", "<cmd>bnext<cr>",     { silent = true })
-vim.keymap.set("n", "<C-k>", "<cmd>bprevious<cr>", { silent = true })
+vim.keymap.set("n", "<C-k>", "<cmd>bnext<cr>",     { silent = true })
+vim.keymap.set("n", "<C-j>", "<cmd>bprevious<cr>", { silent = true })
 
 return M
